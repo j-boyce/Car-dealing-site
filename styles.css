@@ -1,22 +1,22 @@
-
-
-
-
 * {
     border: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 :root {
     --background: rgba(0, 214, 170, .85);
-    font-family: "Monserrat" , sans-serif;
+    font-family: "Monserrat", sans-serif;
 }
 
 
 /******** Nav Bar ********/
+
+
 /* nav {
     background: lightblue;
 } */
+
 header {
     background: var(--background);
     text-align: center;
@@ -24,14 +24,17 @@ header {
     z-index: 999;
     width: 100%;
 }
+
 .nav-toggle {
     position: absolute !important;
     top: -9999px !important;
     left: -9999 !important;
 }
-.nav-toggle:focus ~ .nav-toggle-label {
+
+.nav-toggle:focus~.nav-toggle-label {
     outline: 3px solid rgba(lightblue, .75);
 }
+
 .nav-toggle-label {
     position: absolute;
     top: 0;
@@ -41,25 +44,28 @@ header {
     display: flex;
     align-items: center;
 }
+
 .nav-toggle-label span,
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
-  display: block;
-  background: white;
-  height: 2px;
-  width: 2em;
-  border-radius: 2px;
-  position: relative;
+    display: block;
+    background: white;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
 }
 
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
-  content: '';
-  position: absolute;
+    content: '';
+    position: absolute;
 }
+
 .nav-toggle-label span::before {
     bottom: 7px;
 }
+
 .nav-toggle-label span::after {
     top: 7px;
 }
@@ -81,12 +87,13 @@ nav ul {
     padding-right: 2em;
     list-style: none;
 }
-  
+
 nav li {
     padding-top: 1em;
     margin-bottom: 1em;
     margin-left: 1em;
 }
+
 nav a {
     color: white;
     text-decoration: none;
@@ -99,90 +106,73 @@ nav a {
 nav a:hover {
     color: #000;
 }
-  
-.nav-toggle:checked ~ nav {
-    transform: scale(1,1);
+
+.nav-toggle:checked~nav {
+    transform: scale(1, 1);
 }
 
-.nav-toggle:checked ~ nav a {
+.nav-toggle:checked~nav a {
     opacity: 1;
     transition: opacity 250ms ease-in-out 250ms;
 }
+
 @media screen and (min-width: 800px) {
     .nav-toggle-label {
-      display: none;
+        display: none;
     }
-  
     header {
-      display: grid;
-      grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
-      height: 4em;
+        display: grid;
+        grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+        height: 4em;
     }
-    
     .logo {
-      position: relative;
-      padding-right: 4em;
-      color:white;
+        position: relative;
+        padding-right: 4em;
+        color: white;
     }
-    
     nav {
-      /* // all: unset; /* this causes issues with Edge, since it's unsupported */
-      
-      /* the following lines are not from my video, but add Edge support */ 
-      position: relative;
-      text-align: left;
-      transition: none;
-      transform: scale(1,1);
-      background: none;
-      top: initial;
-      left: initial;
-      /* end Edge support stuff */
-      
-      grid-column: 3 / 4;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
+        /* // all: unset; /* this causes issues with Edge, since it's unsupported */
+        /* the following lines are not from my video, but add Edge support */
+        position: relative;
+        text-align: left;
+        transition: none;
+        transform: scale(1, 1);
+        background: none;
+        top: initial;
+        left: initial;
+        /* end Edge support stuff */
+        grid-column: 3 / 4;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
     }
-    
     nav ul {
-      display: flex;
+        display: flex;
     }
-    
     nav li {
-      margin-left: 3em;
-      margin-bottom: 0;
+        margin-left: 3em;
+        margin-bottom: 0;
     }
-    
     nav a {
-      opacity: 1;
-      position: relative;
+        opacity: 1;
+        position: relative;
     }
-    
     nav a::before {
-      content: '';
-      display: block;
-      height: 5px;
-      background: black;
-      position: absolute;
-      top: -.10em;
-      left: 0;
-      right: 0;
-      transform: scale(0, 1);
-      transition: transform ease-in-out 250ms;
+        content: '';
+        display: block;
+        height: 5px;
+        background: black;
+        position: absolute;
+        top: -.10em;
+        left: 0;
+        right: 0;
+        transform: scale(0, 1);
+        transition: transform ease-in-out 250ms;
     }
-    
     nav a:hover::before {
-      transform: scale(1,1);
+        transform: scale(1, 1);
     }
 }
-  
-  
-  
-  
-
-
-
-
 
 
 /* .nav-brand {
@@ -213,6 +203,7 @@ nav li a{
     display: block;
 } */
 
+
 /* #header .header-img {
     position: absolute;
    background-repeat: no-repeat;
@@ -242,15 +233,12 @@ nav {
     justify-content: left;
     align-items: center;
     padding-top: 4rem;
-    background-image: url(images/broomfield.jpg); 
+    background-image: url(images/broomfield.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     filter: brightness(70%);
-   
-    
 }
-
 
 .hero-content {
     position: relative;
@@ -259,19 +247,21 @@ nav {
     text-align: left;
     justify-content: lwe;
     margin: 6rem;
- }
- .hero-title {
+}
+
+.hero-title {
     font-size: 3rem;
     font-weight: 600;
     margin-bottom: 0;
- }
- .hero-subtitle {
+}
+
+.hero-subtitle {
     font-size: 2rem;
     font-weight: 200;
     margin-top: 1rem;
- }
+}
 
- .hero-button {
+.hero-button {
     background-color: var(--background);
     color: white;
     border: 1px solid var(--background);
@@ -281,34 +271,35 @@ nav {
     font-size: 1.125rem;
     font-weight: 200;
     cursor: pointer;
- }
- .hero-button:hover {
+}
+
+.hero-button:hover {
     background-color: #cb376a;
     border: 1px solid #db7598;
- }
-    
+}
+
+
 /* Stlying of the cards for the cars*/
+
 .car-brands {
     margin-left: 4rem;
-    margin-right: 0;;
+    margin-right: 0;
+    ;
     padding-left: 0;
     align-items: center;
-
-    
 }
 
 .car-display {
     align-content: center;
     width: 100vw;
     margin-top: 2rem;
-    display:flex;
-    
-    
+    display: flex;
 }
+
 .card {
-    float:left;
+    float: left;
     border: 1px solid gray;
-    width:20%;
+    width: 20%;
 }
 
 .card-1 {
@@ -318,14 +309,16 @@ nav {
     border: 1px solid gray;
     width: 20%;
 }
-.card-2{
+
+.card-2 {
     position: relative;
     float: left;
     margin-left: 2rem;
     border: 1px solid gray;
     width: 20%;
 }
-.card-3{
+
+.card-3 {
     float: left;
     margin-left: 2rem;
     border: 1px solid gray;
@@ -335,7 +328,7 @@ nav {
 .card-4 {
     clear: left;
 }
-    
+
 .btn-primary {
     background-color: var(--background);
     border: 1px solid var(--background);
@@ -345,35 +338,3 @@ nav {
     background-color: #cb376a;
     border: 1px solid #cb376a;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
